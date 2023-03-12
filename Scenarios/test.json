@@ -1,0 +1,38 @@
+{
+    "scenarioName": "test",
+    "filename": "test.json",
+    "towns": {
+        "Start": {
+            "connections": [
+                "test"
+            ]
+        },
+        "test": {
+            "name": "test",
+            "market": 5,
+            "leaveCost": 5,
+            "hazardCheck": 5,
+            "townDescription": "test",
+            "marketDescription": "test",
+            "hazardDescription": "test",
+            "connections": [
+                "End"
+            ]
+        },
+        "test2": {
+            "name": "test2",
+            "market": 5,
+            "leaveCost": 5,
+            "hazardCheck": 5,
+            "townDescription": "test2",
+            "marketDescription": "test2",
+            "hazardDescription": "test2",
+            "connections": [
+                "End"
+            ]
+        }
+    },
+    "encounters": {
+        "Generic": {}
+    }
+}

@@ -1,6 +1,5 @@
 import json
 import os
-from pathlib import Path, PureWindowsPath
 
 scenarioData = {
     "scenarioName": "Main Campaign",
@@ -311,13 +310,10 @@ scenarioData = {
 
 }
 
-scenarioPath = PureWindowsPath(".\Scenarios")
-
-if(os.path.isdir(Path(scenarioPath)) == False):
-    os.mkdir(Path(scenarioPath))
+if(os.path.isdir(".\Scenarios") == False):
+    os.mkdir(".\Scenarios")
   
-mainCampaignPath = PureWindowsPath(".\Scenarios\MainCampaign.json")
 
-fileWriter = open(Path(mainCampaignPath), "w")
+fileWriter = open(".\Scenarios\MainCampaign.json", "w")
 fileWriter.write(json.dumps(scenarioData, indent=4))
 fileWriter.close()

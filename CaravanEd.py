@@ -1,6 +1,5 @@
 import json
 import os
-from pathlib import Path, PureWindowsPath
 
 scenarioTemplate = {
     "scenarioName": "",
@@ -354,8 +353,7 @@ while(editorRunning == True):
             loadedScenario = createScenario()
             loadedScenarioName = loadedScenario["scenarioName"]
         elif(selection == 2):
-            selectionPath = PureWindowsPath(".\Scenarios")
-            scenarioList = os.listdir(selectionPath)
+            scenarioList = os.listdir(".\Scenarios")
 
             for i in range(len(scenarioList)):
                 print("{}. {}".format((i+1), scenarioList[i]))
@@ -366,16 +364,14 @@ while(editorRunning == True):
                 print("Invalid Selection.")
             else:
                 if (selection-1) in range(0,len(scenarioList)):
-                    filepath = PureWindowsPath(".\Scenarios\{}".format(scenarioList[selection-1]))
-                    fileReader = open(Path(filepath),"r")
+                    fileReader = open(".\Scenarios\{}".format(scenarioList[selection-1]),"r")
                     loadedScenario = json.loads(fileReader.read())
                     loadedScenarioName = loadedScenario["scenarioName"]
                     fileReader.close()
                 else:
                     print("Invalid Selection!")    
         elif(selection == 3 and loadedScenario != "None"):
-            filepath = PureWindowsPath(".\Scenarios\{}".format(loadedScenario["filename"]))
-            fileWriter = open(Path(filepath), "w")
+            fileWriter = open((".\Scenarios\{}".format(loadedScenario["filename"])), "w")
             fileWriter.write(json.dumps(loadedScenario, indent=4))
             fileWriter.close()
             print("Saved {} to Disk.".format(loadedScenarioName))

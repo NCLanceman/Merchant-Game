@@ -1,0 +1,24 @@
+{
+    "scenarioName": "Silk Road Rumble",
+    "filename": "silk.json",
+    "towns": {
+        "Start": {
+            "connections": "Eretia"
+        },
+        "Eretia": {
+            "name": "Eretia",
+            "market": 5,
+            "leaveCost": 40,
+            "hazardCheck": 15,
+            "townDescription": "The beginning of the silk road, from the hatcheries of the Moon Spiders, straight to the docks.",
+            "marketDescription": "Weaver matrons click and chitters as bolts of cloth shimmer in the winds to passers by.",
+            "hazardDescription": "The cobwebs along the woods tighten to sticky webs across the road. Hunters attack!",
+            "connections": [
+                "End"
+            ]
+        }
+    },
+    "encounters": {
+        "Generic": {}
+    }
+}

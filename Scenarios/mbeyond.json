@@ -1,0 +1,46 @@
+{
+    "scenarioName": "Merchant Beyond",
+    "filename": "mbeyond.json",
+    "towns": {
+        "Start": {
+            "connections": "Gotham"
+        },
+        "Gotham": {
+            "name": "Gotham",
+            "market": 5,
+            "leaveCost": 30,
+            "hazardCheck": 5,
+            "townDescription": "A totally rad cybercity filled with colorful villians and heroes.",
+            "marketDescription": "A neon-slick market place that's generally a cool place to eat noodles in the rain.",
+            "hazardDescription": "Clown painted thugs brandish pipes at you. Fight!",
+            "connections": [
+                "End"
+            ]
+        },
+        "Star City": {
+            "name": "Star City",
+            "market": 2,
+            "leaveCost": 40,
+            "hazardCheck": 13,
+            "townDescription": "A sunshiny metropolis in primary colors.",
+            "marketDescription": "A main street with numerous mom and pop stores leading to the fairgrounds.",
+            "hazardDescription": "It's a gorilla with gun! Man, DC villians are weird. ",
+            "connections": [
+                "End"
+            ]
+        },
+        "Central City": {
+            "name": "Central City",
+            "market": -5,
+            "leaveCost": 50,
+            "hazardCheck": 12,
+            "townDescription": "I'm not sure what goes on here.",
+            "marketDescription": "Stuff",
+            "hazardDescription": "Things",
+            "connections": [
+                "End"
+            ]
+        }
+    },
+    "encounters": {}
+}
